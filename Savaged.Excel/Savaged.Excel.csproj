@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <SignAssembly>True</SignAssembly>
+    <Title>Savaged Excel Functions</Title>
+    <Description>Savaged Excel Functions</Description>
+    <AssemblyOriginatorKeyFile>C:\Users\DavidSavage\source\sandpit\Savaged.Excel\savagedSgKey.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Excel-DNA" Version="1.6.0" />
+  </ItemGroup>
+
+</Project>
