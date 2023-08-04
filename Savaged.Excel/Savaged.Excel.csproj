@@ -7,7 +7,7 @@
     <SignAssembly>True</SignAssembly>
     <Title>Savaged Excel Functions</Title>
     <Description>Savaged Excel Functions</Description>
-    <AssemblyOriginatorKeyFile>C:\Users\DavidSavage\source\sandpit\Savaged.Excel\savagedSgKey.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>C:\Users\DavidSavage\repos\savaged\ExcelFunctions\savagedSgKey.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
   <ItemGroup>
