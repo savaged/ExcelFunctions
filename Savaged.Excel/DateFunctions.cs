@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace Savaged.Excel;
 
-public static class Functions
+public static class DateFunctions
 {
     [ExcelFunction(Description = "Gets the number of days for a given year.")]
     public static int DaysInYear(int year) =>
