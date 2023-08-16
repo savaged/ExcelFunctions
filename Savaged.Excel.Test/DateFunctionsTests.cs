@@ -41,5 +41,17 @@ namespace Savaged.Excel.Test
             Assert.Equal(0, DateFunctions.DaysInYearStarting(new DateTime(9999, 1, 1)));
             Assert.Equal(0, DateFunctions.DaysInYearStarting(DateTime.MaxValue));
         }
+
+        [Fact]
+        public void TestAddYears()
+        {
+            Assert.Equal(new DateTime(2023, 4, 6), DateFunctions.AddYears(new DateTime(2022, 04, 06), 1));
+        }
+
+        [Fact]
+        public void TestSubtractYears()
+        {
+            Assert.Equal(new DateTime(2022, 4, 6), DateFunctions.SubtractYears(new DateTime(2023, 04, 06), 1));
+        }
     }
 }
