@@ -46,12 +46,15 @@ namespace Savaged.Excel.Test
         public void TestAddYears()
         {
             Assert.Equal(new DateTime(2023, 4, 6), DateFunctions.AddYears(new DateTime(2022, 04, 06), 1));
+            Assert.Equal(DateTime.MinValue, DateFunctions.AddYears(new DateTime(9999, 01, 01), 1));
+            Assert.Equal(DateTime.MinValue, DateFunctions.AddYears(new DateTime(9999, 12, 31), 1));
         }
 
         [Fact]
         public void TestSubtractYears()
         {
             Assert.Equal(new DateTime(2022, 4, 6), DateFunctions.SubtractYears(new DateTime(2023, 04, 06), 1));
+            Assert.Equal(DateTime.MinValue, DateFunctions.SubtractYears(new DateTime(0001, 12, 31), 1));
         }
     }
 }
