@@ -1,5 +1,4 @@
-﻿using ExcelDna.Integration;
-using System.Globalization;
+﻿using System.Globalization;
 
 namespace Savaged.Excel;
 
