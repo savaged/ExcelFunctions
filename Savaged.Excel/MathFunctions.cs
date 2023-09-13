@@ -24,8 +24,11 @@ public static class MathFunctions
             for (int j = 0; j < secondColumnCount; j++)
             {
                 var d = 0d;
+                Span<double> firstRow = firstMatrix.GetRowSpan(i);
+                Span<double> secondCol = secondMatrix.GetColumnSpan(j);
+
                 for (int k = 0; k < firstColumnCount; k++)
-                    d += firstMatrix[i, k] * secondMatrix[k, j];
+                    d += firstRow[k] * secondCol[k];
 
                 value[i, j] = d;
             }
