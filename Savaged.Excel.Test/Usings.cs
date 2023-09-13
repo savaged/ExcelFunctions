@@ -1,2 +1,2 @@
 global using Xunit;
-global using Savaged.Excel;
+global using ExcelDna.Integration;

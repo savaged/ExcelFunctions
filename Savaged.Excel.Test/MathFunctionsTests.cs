@@ -1,6 +1,4 @@
-﻿using ExcelDna.Integration;
-
-namespace Savaged.Excel.Test;
+﻿namespace Savaged.Excel.Test;
 
 public class MathFunctionsTests
 {
