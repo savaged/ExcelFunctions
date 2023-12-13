@@ -13,4 +13,6 @@ public static class TransformationFunctions
     public static string FromUniqueIdentifier(this string uid) =>
         string.IsNullOrEmpty(uid) ? string.Empty :
         Encoding.UTF8.GetString(Convert.FromBase64String(uid));
+
+    // TODO Add Excel's missing Pad function
 }
