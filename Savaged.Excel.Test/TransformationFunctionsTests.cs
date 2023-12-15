@@ -21,4 +21,22 @@ public class TransformationFunctionsTests
         Assert.Equal(SCHEME, SCHEME_UID.FromUniqueIdentifier());
     }
 
+    [Fact]
+    public void TestPad()
+    {
+        Assert.Equal("007", 7.Pad(3, '0', false));
+        Assert.Equal("070", 70.Pad(3, '0', false));
+
+        Assert.Equal("06.9", 6.9.PadNumberWithDecimalPlaces(3, '0', false));
+
+        Assert.Equal("007", (-7).Pad(3, '0', false));
+        Assert.Equal("06.9", (-6.9).PadNumberWithDecimalPlaces(3, '0', false));
+
+        Assert.Equal("300", 3.Pad(3, '0', true));
+        Assert.Equal("2.90", 2.9.PadNumberWithDecimalPlaces(3, '0', true));
+
+        Assert.Equal("X5", 5.Pad(2, 'X', false));
+        Assert.Equal("5X", 5.Pad(2, 'X', true));
+    }
+
 }
