@@ -7,8 +7,7 @@ public static class TransformationFunctions
     private const string PAD_DESCRIPTION =
         "Excel's missing Pad function. Pad with the default zero to the specified count with a specified character. NOTE: Any negative value will be returned positive for the default left-hand side padding.";
     private const string PAD_ARG1 = "Value to pad";
-    private const string PAD_ARG2 =
-        "Count of characters after padding (default is the size of the value + 1)";
+    private const string PAD_ARG2 = "Count of characters after padding";
     private const string PAD_ARG3 = "Padding character (default is '0')";
     private const string PAD_ARG4 = "Padding on right-hand side (default is left)";
 
@@ -71,7 +70,7 @@ public static class TransformationFunctions
         var paddingSize = charCountAfterPadding - value?.Length ?? 0;
         var padding = new string(
             padCharacter == '\0' ? '0' : padCharacter,
-            paddingSize < 1 ? 1 : paddingSize);
+            paddingSize < 0 ? 0 : paddingSize);
         return padRighthandSide ? $"{value}{padding}" : $"{padding}{value}";
     }
 
